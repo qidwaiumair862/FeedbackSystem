@@ -1,0 +1,301 @@
+/* Dropdown container */
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #000;
+  z-index: 1000;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  min-width: 180px; /* ensures uniform width */
+}
+
+/* Show dropdown on hover */
+nav ul li:hover > ul {
+  display: block;
+}
+
+/* Dropdown items */
+nav ul ul li {
+  width: 180px; /* same width for all dropdown items */
+  position: relative;
+  list-style: none;
+}
+
+/* Links inside dropdown */
+nav ul ul li a {
+  display: block;
+  padding: 12px 20px; /* proper spacing */
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Hover effect */
+nav ul ul li a:hover {
+  background-color: #333;
+  color: orange;
+  transform: translateX(0px);
+}
+
+/* Nested submenus (3rd level) */
+nav ul ul ul {
+  top: 0;
+  left: 100%;
+  border-radius: 5px;
+  min-width: 180px;
+}
+
+/* Smooth hover transition */
+nav ul ul li {
+  transition: 0.3s ease;
+}
+
+/* Optional: slight move effect */
+nav ul ul li:hover {
+  background-color: #222;
+  transform: translateX(5px);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right,#f8f9fa,#e8effa);
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #a0c1ff, #e0eaff);
+  min-height: 100vh;
+  background-attachment: fixed;
+}
+
+/* add */
+.header-text {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.header-text .line1,
+.header-text .line2{
+
+  font-size: 50px;
+  line-height: 1.4;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  display: block; 
+}
+
+.header-text .line1{
+  /* color: ; */
+   display: block; 
+   font-size: 28px;
+   font-weight: bold;
+   text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.header-text .line2{
+  color: #ff6600;
+  display: block; 
+  font-size: 28px;
+   font-weight: bold;
+   text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+
+}
+ /* add complete */
+
+.header {
+   display: flex; 
+   align-items: center; 
+   justify-content: space-between; 
+  background-color: #e6ecff;
+  padding: 10px 20px;
+   position: relative; 
+  min-height: 100px;
+}
+
+.logo img {
+  height: 100px;
+  width: 100px; 
+  border-radius: 50%;
+  object-fit: cover;
+  /* border: 10px; */
+  /* box-shadow: 2px 2px 10px rgba(0,0,0,0.2); */
+}
+
+.header-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #000;
+}
+
+.header-text span {
+  font-size: 18px;
+  display: block;
+}
+
+nav {
+  position: sticky;
+  top:0;
+  z-index: 100;
+  background-color: #000;
+  /* margin-top: -10px; */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  position: relative;
+}
+
+nav ul li {
+  position: relative;
+}
+
+
+nav ul li a {
+  display: block;
+  padding: 15px 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+nav ul li:hover {
+  color: orange;
+  transform: scale(1.1);
+  background-color: #333;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #000;
+  z-index: 1000;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+nav ul ul li {
+  width: 180px;
+}
+
+nav ul ul ul {
+  top: 0;
+  left: 100%;
+}
+
+nav ul ul li:hover > ul {
+  display: block;
+}
+
+nav ul ul li a:hover {
+  background-color: #222;
+}
+/* a{
+  text-decoration: none;
+} */
+
+nav a:hover {
+  color: orange;
+}
+
+
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 80px 20px 40px;
+}
+
+.login-box {
+  /* margin-left: auto; */
+  background-color: black;
+  color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  margin-top: 1px;
+}
+
+.login-box h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: orange;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  background-color: orange;
+  color: #000;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-box p {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.login-box a {
+  color: red;
+  text-decoration: none;
+
+}
+/* Popup Overlay */
+#signupSuccessPopup{
+  display: none;
+  position: fixed;
+  top:20%;
+  left:40%;
+  transform: translate(-50%,-50%);
+  background-color: #e0ffe0;
+  padding: 20px;
+  border: 2px solid #4caf50;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+#signupSuccessPopup button{
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  float:right;
+  cursor: pointer;
+}
+
+.admin-link {
+  text-decoration: none !important;
+  color: white; /* ya jo bhi color chahiye */
+}
+
+.admin-link:hover {
+  text-decoration: none !important;
+}
